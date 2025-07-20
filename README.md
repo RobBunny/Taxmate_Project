@@ -275,6 +275,16 @@ For support and inquiries:
 - **Documentation**: [docs.taxmate.com](https://docs.taxmate.com)
 - **Issues**: [GitHub Issues](https://github.com/RobBunny/Taxmate_Project/issues)
 
+## 📱 Download App
+
+**Android APK**: [Download TaxMate v1.0.0 (27.5MB)](https://drive.google.com/file/d/1tiSS2U_tFBH8TLQN5XsPTfgsvG2Xn_Gj/view?usp=drive_link)
+
+### Installation Steps
+1. Click the download link above
+2. Enable "Install from unknown sources" in Android Settings > Security
+3. Install the APK file
+4. Launch TaxMate and enjoy the full-featured financial platform!
+
 ## 🔄 Version History
 
 ### v1.0.0 (Current)
