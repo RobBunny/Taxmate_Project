@@ -277,7 +277,7 @@ For support and inquiries:
 
 ## 📱 Download App
 
-**Android APK**: [Download TaxMate v1.0.0 (27.5MB)](https://drive.google.com/file/d/1tiSS2U_tFBH8TLQN5XsPTfgsvG2Xn_Gj/view?usp=drive_link)
+**Android APK**: [Download TaxMate v1.0.0 (27.5MB)](https://github.com/RobBunny/Taxmate_Project/releases/download/v1.0.0/app-release.apk)
 
 ### Installation Steps
 1. Click the download link above
