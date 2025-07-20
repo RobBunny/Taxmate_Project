@@ -311,7 +311,7 @@ For support and inquiries:
 
 ## ⚠️ Important Note About APKs
 
-- The `app-release.apk` file in the repository root (or in `flutter_server/build/app/outputs/flutter-apk/`) was built **before the backend was hosted**.  
+- The `app-release.apk` file in the repository root was built **before the backend was hosted**.  
   **It will only work if you run the backend server on your PC.**
 - For the cloud-hosted version, download the latest APK from the [Releases](https://github.com/RobBunny/Taxmate_Project/releases) section or from the provided Google Drive link.
 
