@@ -57,7 +57,8 @@ class _ChatPageState extends State<ChatPage> {
   void _connectWebSocket() {
     try {
       _channel = IOWebSocketChannel.connect(
-        Uri.parse('ws://10.98.204.246:8000/ws/chat/${widget.senderId}'),
+        Uri.parse('wss://taxmate-project.onrender.com/ws/chat/${widget.senderId}'),
+        //Uri.parse('ws://10.98.204.246:8000/ws/chat/${widget.senderId}'),
         //Uri.parse('ws://10.33.24.1:8000/ws/chat/${widget.senderId}'),
         //Uri.parse('ws://10.0.2.2:8000/ws/chat/${widget.senderId}'),
       );

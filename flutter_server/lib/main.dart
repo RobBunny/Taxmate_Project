@@ -27,9 +27,10 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final FlutterSecureStorage storage;
+  final String apiBaseUrl = 'https://taxmate-project.onrender.com';  // Your hosted backend
   //final String apiBaseUrl = 'http://192.168.49.102:8000';
   //final String apiBaseUrl = 'http://10.0.2.2:8000';  // Use this for Android emulator
-  final String apiBaseUrl = 'http://10.98.204.246:8000';  // Your confirmed IP address
+  //final String apiBaseUrl = 'http://10.98.204.246:8000';  // Your confirmed IP address
   //final String apiBaseUrl = 'http://localhost:8000';  // For web debugging
   const MyApp({super.key, required this.storage});
 

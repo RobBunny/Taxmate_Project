@@ -1,4 +1,5 @@
 # Standard library imports
+import os
 from datetime import date, datetime
 from typing import Optional, List
 
@@ -8,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 import uvicorn
 from passlib.context import CryptContext
+import nltk
 import models, schemas, crud
 from database import SessionLocal, engine, get_db
 from models import User, ServiceRequest, LoanRequest, LoanStatus
@@ -22,12 +24,26 @@ from simple_chatbot import AdvancedFinancialChatbot
 # Create tables
 models.Base.metadata.create_all(bind=engine)
 
+def setup_nltk_data():
+    """Download required NLTK data if not already present"""
+    datasets = ['stopwords', 'wordnet', 'punkt', 'punkt_tab']
+    
+    for dataset in datasets:
+        try:
+            nltk.data.find(f'tokenizers/{dataset}' if 'punkt' in dataset else f'corpora/{dataset}')
+        except LookupError:
+            print(f"Downloading NLTK dataset: {dataset}")
+            nltk.download(dataset, quiet=True)
+
 app = FastAPI()
 
 app.include_router(upload_router)
 app.include_router(chat_router)
 app.include_router(password_router)
 app.include_router(financial_report_router)
+
+# Setup NLTK data before initializing chatbot
+setup_nltk_data()
 
 # Initialize the financial chatbot
 financial_chatbot = AdvancedFinancialChatbot()
@@ -594,6 +610,3 @@ def chat_with_financial_assistant(
         return {"response": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Chatbot error: {str(e)}")
-
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

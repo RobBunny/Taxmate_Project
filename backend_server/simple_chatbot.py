@@ -1,5 +1,7 @@
 
 # --- Enhanced Financial Chatbot Implementation ---
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 import re
 import random
 import json
